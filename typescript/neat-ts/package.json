@@ -1,0 +1,21 @@
+{
+  "name": "neat-ts",
+  "version": "1.0.0",
+  "description": "A neat TypeScript project",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "watch": "npx tsc --watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.7",
+    "jest": "^30.0.3",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.0.0"
+  }
+}
