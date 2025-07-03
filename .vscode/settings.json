@@ -41,5 +41,19 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "javascript.format.enable": true,
     "typescript.format.enable": true,
-    "eslint.enable": true
+    "eslint.enable": true,
+    "[rust]": {
+        "rust-client.engine": "rust-analyzer",
+        "rust-analyzer.server.path": null,
+        "rust-analyzer.checkOnSave.command": "clippy",
+        "rust-analyzer.cargo.allFeatures": true,
+        "rust-analyzer.cargo.loadOutDirsFromCheck": true,
+        "rust-analyzer.procMacro.enable": true,
+        "rust-analyzer.inlayHints.enable": true,
+        "rust-analyzer.diagnostics.enable": true,
+        "rust-analyzer.diagnostics.disabled": [
+            "unresolved-proc-macro"
+        ],
+        "rust-analyzer.updates.channel": "stable"
+    },
 }

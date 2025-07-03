@@ -1,5 +1,6 @@
 ---
 applyTo: '**'
+---
 Bạn hãy tự động kiểm tra, chỉnh sửa code và chạy lại chương trình.
 Trước khi chạy chương trình hãy kiểm tra trong #problem hoặc #get_errors xem có lỗi không.
 Có lỗi hãy sửa cho không còn lỗi rồi tiếp tục.
