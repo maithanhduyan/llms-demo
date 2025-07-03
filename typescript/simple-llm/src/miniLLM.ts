@@ -3,6 +3,13 @@ import { relu } from './activation.js';
 import { TransformerBlock } from './transformer.js';
 import { matMul } from './utils.js';
 
+function addPositionalEncoding(patches: number[][]): number[][] {
+  // Sin-cos positional encoding đơn giản
+  return patches.map((patch, i) =>
+    patch.map((v, j) => v + Math.sin(i / Math.pow(10000, j / patch.length)))
+  );
+}
+
 export class MiniLLM {
   inputDim: number;
   patchSize: number;
@@ -33,7 +40,8 @@ export class MiniLLM {
     for (let i = 0; i < image.length; i += this.patchDim) {
       patches.push(image.slice(i, i + this.patchDim));
     }
-    return patches;
+    // Thêm positional encoding vào patch
+    return addPositionalEncoding(patches);
   }
 
   patchEmbed(patch: number[]): number[] {
